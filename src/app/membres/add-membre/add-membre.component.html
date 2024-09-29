@@ -1,0 +1,74 @@
+<div class="container">
+    <form [formGroup] = " membreForm" #f="ngForm">
+        <fieldset>
+          <legend>Informations du Nouveau Membre</legend>
+          <div>
+            <label for="txtIdMembre" class="form-label mt-4">ID</label>
+            <input type="text" formControlName="num_membre" class="form-control" id="txtIdMembre" readonly value="0">
+          </div>
+          <div>
+            <label for="txtImageMembre" class="form-label mt-4">Photo</label>
+            <input class="form-control" formControlName="image_membre" type="file" id="txtImageMembre" required ngModel>
+          </div>
+          <div>
+            <label for="txtNomMembre" class="form-label mt-4">Nom</label>
+            <input type="text" formControlName="nom_membre"  class="form-control" id="txtNomMembre" placeholder="nom..."  required ngModel>
+          </div>
+          <div>
+            <label for="txtPrenomMembre" class="form-label mt-4">Prenom</label>
+            <input type="text" formControlName="prenom_membre"  class="form-control" id="txtPrenomMembre" placeholder="prénom..." required ngModel>
+          </div>
+          <div>
+            <label for="txtAdresseMembre" class="form-label mt-4">Adresse</label>
+            <textarea class="form-control" formControlName="adresse_membre"  id="txtAdresseMembre" rows="3" required ngModel></textarea>
+          </div>
+          <div>
+            <label for="txtTelMembre" class="form-label mt-4">Tél</label>
+            <input type="text" formControlName="tel_membre" class="form-control" id="txtTelMembre" placeholder="0492...."  required ngModel>
+          </div>
+          <div>
+            <label for="txtNomPere" class="form-label mt-4">Nom Père</label>
+            <input type="text" formControlName="nom_pere_membre" class="form-control" id="txtNomPere" placeholder="nom...Père" required ngModel>
+          </div>
+          <div>
+            <label for="txtNomMere" class="form-label mt-4">Nom Mère</label>
+            <input type="text" formControlName="nom_mere_membre" class="form-control" id="txtNomMere" placeholder="nom...Mère"  required ngModel>
+          </div>
+          <div>
+            <label for="txtDateMembre" class="form-label mt-4">Date Inscription</label>
+            <input type="date" formControlName="date_inscription_membre" class="form-control" id="txtDateMembre" required ngModel>
+          </div>
+          <div>
+            <label for="txtEmailMembre" class="form-label mt-4">Email address</label>
+            <input type="email" formControlName="email" class="form-control" id="txtEmailMembre" aria-describedby="emailHelp" placeholder="Enter email" required ngModel>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div>
+            <label for="txtPasswordMembre" class="form-label mt-4">Password</label>
+            <input type="password" formControlName="password" class="form-control" id="txtPass" placeholder="Password" autocomplete="off" required ngModel>
+          </div>
+          <div>
+            <label for="txtFonction" class="form-label mt-4">Fonction</label>
+            <select class="form-select" id="txtFonction" required  formControlName="fonction_membre">
+              <option>Membre</option>
+              <option>Président</option>
+              <option>VP</option>
+              <option>SG</option>
+              <option>SGA</option>
+              <option>CC</option>
+              <option>CCA</option>
+              <option>Trésorier</option>
+              <option>Censeur</option>
+              <option>Censeur A</option>
+              <option>Contrôleur F</option>
+              <option>Responsable des AC</option>
+            </select>
+          </div>
+          <div>
+            <label for="txtNomMembre" class="form-label mt-4">Status</label>
+            <input type="text" formControlName="status_membre" class="form-control" id="txtNomMembre" readonly value="1">
+          </div>
+           <button type="submit" (click)="addMembre()"    class="btn btn-primary">Add Membre</button>
+        </fieldset>
+      </form>
+</div>

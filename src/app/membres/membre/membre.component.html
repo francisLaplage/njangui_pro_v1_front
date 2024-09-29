@@ -1,0 +1,23 @@
+<div class="container mt-2">
+
+    <td> <a  class="btn btn-primary">Add</a> </td> 
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOM</th>
+            <th scope="col">DESCRIPTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-secondary" *ngFor="let p of membres">
+            <td>    {{p.num_membre}}    </td>
+            <td>    {{p.nom_membre}}   </td>
+            <td>    {{p.prenom_membre}}</td>
+            <td> <a  class="btn btn-success">Edit</a> </td>    
+            <td> <a    class="btn btn-danger">Delete</a> </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
